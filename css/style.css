@@ -30,7 +30,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0 0.5rem;
+  position: relative;
+  transform: translateY(-20%);
 }
 
 .row2 {
@@ -249,9 +250,11 @@ body {
 .instructions {
   list-style-type: none;
   display: flex;
-  margin: 3rem 0;
   flex-direction: column;
-  text-align: center;
+  position: absolute;
+  left: 20px;
+  bottom: -200px;
+  margin: 3rem 0;
 }
 .instructions *:not(:last-child) {
   margin-bottom: 1rem;

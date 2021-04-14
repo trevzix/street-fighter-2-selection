@@ -33,7 +33,10 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0 0.5rem;
+
+  // background-color: red;
+  position: relative;
+  transform: translateY(-20%);
 }
 
 .row2 {
@@ -234,9 +237,12 @@ body {
 }
 
 .instructions {
-  // background-color: green;
   list-style-type: none;
   display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 20px;
+  bottom: -200px;
 
   margin: 3rem 0;
   // margin-top: 2rem;
@@ -246,9 +252,6 @@ body {
     }
   }
 
-  // align-items: center;
-  flex-direction: column;
-  text-align: center;
   .keys {
     color: red;
     font-size: 1.5rem;
