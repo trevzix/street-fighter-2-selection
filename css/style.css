@@ -1,0 +1,342 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #000060;
+  font-family: Roboto, "sans-serif";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0.5rem;
+}
+
+.row2 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#char-selected,
+#char-selected-hidden {
+  width: 70px;
+}
+
+#char-selected {
+  margin: 0 0.5rem;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+#char-selected-hidden {
+  visibility: hidden;
+}
+
+.map {
+  width: 350px;
+}
+
+.char-grid {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.char-grid__row1, .char-grid__row2 {
+  display: flex;
+  position: relative;
+}
+.char-grid .characters {
+  width: 30px;
+  border: 1px solid gray;
+  border-bottom: 2px solid gray;
+  border-top: 2px solid gray;
+}
+.char-grid .squares {
+  width: 30px;
+  height: 45px;
+  position: relative;
+  background-color: black;
+}
+
+.selected {
+  position: absolute;
+  top: -7px;
+  left: -3px;
+  width: 35px;
+  height: 60px;
+  visibility: visible;
+}
+
+.row1 {
+  position: relative;
+}
+
+.flags {
+  width: 40px;
+  position: absolute;
+  display: none;
+}
+
+.flag-balrog {
+  right: 20%;
+  top: 14%;
+}
+@media only screen and (max-width: 719px) {
+  .flag-balrog {
+    right: 20.7%;
+  }
+}
+
+.flag-guile {
+  right: 4%;
+  top: 35.99%;
+  transform: scale(0.99);
+}
+@media only screen and (max-width: 719px) {
+  .flag-guile {
+    top: 36.5%;
+    right: 4.2%;
+    transform: scale(1);
+  }
+}
+
+.flag-ken {
+  right: 5.5%;
+  top: 6.5%;
+}
+@media only screen and (max-width: 719px) {
+  .flag-ken {
+    right: 5.6%;
+    top: 7%;
+    transform: scale(1.05);
+  }
+}
+
+.flag-blanka {
+  bottom: 16%;
+  right: 10.5%;
+  transform: scale(1.03);
+}
+@media only screen and (max-width: 719px) {
+  .flag-blanka {
+    bottom: 17%;
+    transform: scale(1.04);
+  }
+}
+
+.flag-ryu {
+  bottom: 29.9%;
+  left: 50.2%;
+}
+@media only screen and (max-width: 719px) {
+  .flag-ryu {
+    bottom: 30.7%;
+    left: 50.2%;
+  }
+}
+
+.flag-honda {
+  bottom: 54.7%;
+  right: 33%;
+}
+@media only screen and (max-width: 719px) {
+  .flag-honda {
+    bottom: 55.5%;
+    right: 33.5%;
+    transform: scaleY(1.05);
+  }
+}
+
+.flag-chunli {
+  top: 12.9%;
+  left: 40%;
+  transform: scale(0.9);
+}
+@media only screen and (max-width: 719px) {
+  .flag-chunli {
+    top: 13%;
+    left: 40.3%;
+    transform: scale(0.95);
+  }
+}
+
+.flag-zangief {
+  top: 14%;
+  left: 20%;
+  transform: scale(1.05);
+}
+@media only screen and (max-width: 719px) {
+  .flag-zangief {
+    top: 15%;
+    left: 20.3%;
+  }
+}
+
+.flag-vega {
+  top: 7%;
+  left: 1%;
+  transform: scale(0.95);
+}
+
+.flag-bison,
+.flag-sagat {
+  bottom: 19%;
+  left: 37.2%;
+  transform: scale(0.88);
+}
+@media only screen and (max-width: 719px) {
+  .flag-bison,
+.flag-sagat {
+    left: 37.55%;
+    bottom: 19.5%;
+    transform: scale(1);
+  }
+}
+
+.flag-dhalsim {
+  bottom: 36.5%;
+  left: 22.4%;
+  transform: scale(0.92);
+}
+@media only screen and (max-width: 719px) {
+  .flag-dhalsim {
+    bottom: 37%;
+    transform: scale(0.99);
+  }
+}
+
+.flag-selected {
+  display: inline;
+}
+
+.fa-volume-up,
+.fa-volume-mute {
+  position: fixed;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: white;
+  top: 1rem;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.fa-volume-up:hover,
+.fa-volume-mute:hover {
+  opacity: 1;
+}
+
+.instructions {
+  list-style-type: none;
+  display: flex;
+  margin: 3rem 0;
+  flex-direction: column;
+  text-align: center;
+}
+.instructions *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.instructions .keys {
+  color: red;
+  font-size: 1.5rem;
+}
+.instructions .key {
+  color: red;
+  font-size: 1.2rem;
+}
+.instructions li {
+  color: white;
+  font-size: 1rem;
+}
+
+.bottom {
+  position: fixed;
+  bottom: 3%;
+  color: white;
+}
+.bottom .fa-heart {
+  color: red;
+}
+.bottom a {
+  color: red;
+  cursor: pointer;
+}
+
+@media (min-width: 720px) {
+  .container {
+    margin-top: -5%;
+  }
+
+  .map {
+    width: 500px;
+  }
+
+  #char-selected,
+#char-selected-hidden {
+    width: 130px;
+  }
+
+  .characters {
+    width: 50px !important;
+    border: 1px solid gray;
+    border-bottom: 2px solid gray;
+    border-top: 2px solid gray;
+  }
+
+  .squares {
+    width: 50px !important;
+    height: 75px !important;
+    position: relative;
+  }
+
+  .flags {
+    width: 60px;
+    position: absolute;
+  }
+
+  .selected {
+    position: absolute;
+    top: -12px;
+    left: -3px;
+    width: 60px;
+    height: 100px;
+    visibility: visible;
+  }
+
+  .fa-volume-up,
+.fa-volume-mute {
+    position: fixed;
+    right: 1rem;
+    font-size: 2rem;
+    color: white;
+    top: 1rem;
+    opacity: 0.5;
+    cursor: pointer;
+  }
+  .fa-volume-up:hover,
+.fa-volume-mute:hover {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

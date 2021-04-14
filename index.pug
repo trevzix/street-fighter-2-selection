@@ -1,0 +1,86 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    
+    //- Font Awesome
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css")
+
+    link(rel="stylesheet", href="css/style.css")
+    title Test
+  body 
+    script(src="script.js" defer)
+    
+    audio#audio(loop autoplay)
+      source(src="sound/character_selection_sf2.mp3", type="audio/mpeg")
+
+    <i class="fas fa-volume-up" id="volumeBtn"></i>
+    .container
+      .row1
+          img#map.map(src="images/map.png", alt="", srcset="")
+          img.flags.flag-ken(src="images/flags/flag-usa.png")
+          img.flags.flag-guile(src="images/flags/flag-usa.png")
+          img.flags.flag-balrog(src="images/flags/flag-usa.png")
+          img.flags.flag-blanka(src="images/flags/flag-brazil.png")
+          img.flags.flag-chunli(src="images/flags/flag-china.png")
+          img.flags.flag-zangief(src="images/flags/flag-ussr.png")
+          img.flags.flag-dhalsim(src="images/flags/flag-india.png")
+          img.flags.flag-ryu.flag-selected(src="images/flags/flag-japan.png")
+          img.flags.flag-honda(src="images/flags/flag-japan.png")
+          img.flags.flag-vega(src="images/flags/flag-spain.png")
+          img.flags.flag-bison(src="images/flags/flag-thailand.png")
+          img.flags.flag-sagat(src="images/flags/flag-thailand.png")
+        
+      .row2
+        img#char-selected(src="images/char-ryu.png", alt="")
+        .char-grid
+          .char-grid__row1
+            .squares.square1 
+              img.characters#grid-ryu(src="images/char-grid-ryu.png")
+              img.selected(src="images/selected.png")
+            .squares.square2
+              img.characters#grid-honda(src="images/char-grid-honda.png")
+            .squares.square3
+              img.characters#grid-blanka(src="images/char-grid-blanka.png")
+            .squares.square4 
+              img.characters#grid-guile(src="images/char-grid-guile.png")
+            .squares.square5 
+              img.characters#grid-balrog(src="images/char-grid-balrog.png")
+            .squares.square6 
+              img.characters#grid-vega(src="images/char-grid-vega.png")
+          .char-grid__row2
+            .squares.square7 
+              img.characters#grid-ken(src="images/char-grid-ken.png")
+            .squares.square8
+              img.characters#grid-chunli(src="images/char-grid-chunli.png")
+            .squares.square9
+              img.characters#grid-zangief(src="images/char-grid-zangief.png")
+            .squares.square10
+              img.characters#grid-dhalsim(src="images/char-grid-dhalsim.png")
+            .squares.square11
+              img.characters#grid-sagat(src="images/char-grid-sagat.png")
+            .squares.square12
+              img.characters#grid-bison(src="images/char-grid-bison.png")
+
+        img#char-selected-hidden(src="images/char-ken.png", alt="")
+      ul.instructions
+        li Use arrow keys 
+          span.keys (←↓↑→)
+        li or vim style keys 
+          span.keys (hjkl) 
+          | to navigate.
+        li Press 
+          span.key Enter 
+          | or 
+          span.key Space  
+          | to select the character
+      .bottom 
+        p Made with love 
+          i.fas.fa-heart
+          |  by 
+          a(href="https://trevzix.com") trevix
+          
+        
+          

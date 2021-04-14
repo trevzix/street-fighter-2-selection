@@ -1,0 +1,56 @@
+@media (min-width: 720px) {
+  // @media (min-width: 1280px) {
+  .container {
+    margin-top: -5%;
+  }
+  .map {
+    width: 500px;
+  }
+
+  #char-selected,
+  #char-selected-hidden {
+    width: 130px;
+  }
+
+  .characters {
+    width: 50px !important;
+    border: 1px solid gray;
+    border-bottom: 2px solid gray;
+    border-top: 2px solid gray;
+  }
+
+  .squares {
+    width: 50px !important;
+    height: 75px !important;
+    position: relative;
+  }
+
+  .flags {
+    width: 60px;
+    position: absolute;
+    // display: none;
+  }
+
+  .selected {
+    position: absolute;
+    top: -12px;
+    left: -3px;
+    width: 60px;
+    height: 100px;
+    visibility: visible;
+  }
+
+  .fa-volume-up,
+  .fa-volume-mute {
+    position: fixed;
+    right: 1rem;
+    font-size: 2rem;
+    color: white;
+    top: 1rem;
+    opacity: 0.5;
+    cursor: pointer;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
