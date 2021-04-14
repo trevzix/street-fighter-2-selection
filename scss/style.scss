@@ -35,8 +35,8 @@ body {
   justify-content: center;
 
   // background-color: red;
-  position: relative;
-  transform: translateY(-20%);
+  // position: relative;
+  // transform: translateY(-20%);
 }
 
 .row2 {
@@ -240,9 +240,6 @@ body {
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  position: absolute;
-  left: 20px;
-  bottom: -200px;
 
   margin: 3rem 0;
   // margin-top: 2rem;
