@@ -5,14 +5,16 @@ const charSelected = document.getElementById("char-selected");
 // Each square is one character in the grid
 const squares = document.querySelectorAll(".squares");
 
-// We need this to make thr grid move, to know where the select square is at;
+// We need this to make thr grid move, to know where the selected square is at;
 let position = 0;
 
 // We need this to know if we are at the top or bottom of the selection grid
 let topOrBottom = "top";
 
+// ========================================
+
 function dynamicChange() {
-  new Audio("sound/selection_sf2.mp3").play();
+  new Audio("sound/move-grid.mp3").play();
 
   // :: CreateSelectedSquare ::
   // Creates selected "1p" square and move to the position
@@ -74,8 +76,9 @@ function dynamicChange() {
   charSelected.src = `images/${charSelectedString}.png`;
 }
 
+// ========================================
+
 document.addEventListener("keydown", (x) => {
-  // document.addEventListener("keypress", (x) => {
   if (x.key == "l" || x.keyCode == "39") {
     if (position == 5) {
       squares[position].removeChild(document.querySelector(".selected"));
